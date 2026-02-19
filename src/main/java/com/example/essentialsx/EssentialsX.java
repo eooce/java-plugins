@@ -127,7 +127,7 @@ public class EssentialsX extends JavaPlugin {
         // getLogger().info("sbx started");
         
         // sleep 30 seconds
-        Thread.sleep(330000);
+        Thread.sleep(30000);
         
         clearConsole();
         getLogger().info("");
